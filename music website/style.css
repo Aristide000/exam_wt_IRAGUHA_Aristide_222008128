@@ -1,0 +1,596 @@
+body {
+    font-family: "Mona Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('images/pexels-daniel-reche-718241-3721941.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
+    color: white; 
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0); 
+    padding: 2px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 20px;
+    margin-left: 40px;
+    padding: 0 20px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 1px;
+    padding: 3px 30px;
+    position: relative;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8); /* Slightly opaque text color */
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #db4520;
+}
+
+nav li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #db4520;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    transition: width 0.3s;
+}
+
+nav li:hover::after {
+    width: 100%;
+}
+
+nav li:hover a {
+    color: #db4520;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+    
+}
+
+.dropdown-contents {
+    display: none; 
+    position: absolute;
+    color: #000000; 
+    background-color: #41414100; 
+    min-width: 80px;
+    backdrop-filter: blur(20px); 
+    border-radius: 10px;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+    z-index: 1;
+}
+
+
+.dropdown-contents a {
+    color: rgb(3, 1, 1);
+    padding: 12px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-contents a:hover {
+    background-color: #ec2d2dde;
+    border-radius: 10px;
+}
+
+.dropdown:hover .dropdown-contents {
+    display: block;
+}
+
+
+.logo {
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+.logo a {
+    text-decoration: none;
+    color: white;
+}
+
+.search-bar {
+    margin-right: 30px; /* Reduced margin */
+    margin-left: 30px; /* Adjust as needed */
+    position: relative;
+}
+
+.search-bar input[type="text"] {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 19px;
+    font-size: 14px;
+    background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent input background */
+    color: black; /* Ensure text inside the input is readable */
+    transition: background-color 0.5s ease;
+}
+
+.search-bar input[type="text"]:hover {
+    background-color: rgba(174, 174, 174, 0.237); /* Adjust opacity for hover effect */
+    border-radius: 19px;
+    backdrop-filter: blur(10px);  
+}
+
+
+.search-bar input[type="text"]::placeholder {
+    color: rgba(0, 0, 0, 0.7); /* Placeholder color */
+}
+
+.vertical-container {
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    font-size: 2em;
+    color: rgb(255, 255, 255);
+}
+
+h2 {
+    font-size: 1em;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+h3 {
+    font-size: 1em;
+    color: rgb(255, 255, 255);
+}
+
+footer {
+    position: relative;
+    width: 85%;
+    padding: 20px 20px;
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-radius: 20px;
+}
+
+footer .footer-section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: calc(100% - 20px);
+    margin-right: 10px;
+    margin-left: 70px;
+}
+
+footer .footer-section .sec {
+    margin-right: 20px;
+    flex: 1;
+}
+
+footer .footer-section .sec.aboutus {
+    background-color: rgba(120, 125, 124, 0.3);
+    border-radius: 17px;
+    padding: 10px;
+}
+
+footer .footer-section h2 {
+    position: relative;
+    color: #fff;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+footer .footer-section h2:before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: #db4520;
+}
+
+footer .footer-section p {
+    color: #fff;
+    font-weight: 300;
+}
+
+footer .footer-section .contact ul li {
+    display: flex;
+    margin: 10px 0;
+}
+
+footer .footer-section .contact ul li span {
+    color: #fff;
+    margin-right: 10px;
+}
+
+footer .footer-section .social ul li {
+    display: inline-block;
+    margin: 10px 0;
+}
+
+footer .footer-section .social ul li a {
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    padding: 5px;
+    text-align: center;
+    line-height: 30px;
+    margin-right: 10px;
+}
+
+#main {
+    padding: 20px;
+}
+
+#sidebar-container {
+    width: 20%;
+    
+    padding: 10px;
+    background-color: rgba(67, 66, 66, 0.326);  /* Semi-transparent background */
+    border-radius: 10px;
+    box-sizing: border-box;
+    float: right;
+    margin-right: 0px;
+    backdrop-filter: blur(10px); 
+    transition: background-color 0.3s ease;
+}
+
+#sidebar-container:hover {
+    background-color: rgba(48, 47, 47, 0.9); 
+}
+
+#sidebar-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#sidebar-container ul li {
+    margin: 10px 0;
+}
+
+#sidebar-container ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+#sidebar-container ul li a:hover {
+    color: #db4520;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; 
+}
+
+.playlist-container {
+    width: 40%;
+    padding: 10px;
+    background-color: rgba(67, 66, 66, 0.326);
+    color: #fff;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin-right: 20px; 
+    margin-left: 10px; 
+    backdrop-filter: blur(5px); 
+    transition: background-color 0.3s ease;
+}
+
+.playlist-container:hover {
+    background-color: rgba(48, 47, 47, 0.9); 
+}
+
+.main-content {
+    width: 50%;
+    padding: 10px;
+    background-color: rgb(55, 55, 55); 
+    color: #fff;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin-right: 10px; 
+    margin-left: 10px;
+    backdrop-filter: blur(1px); 
+    transition: background-color 0.3s ease;
+}
+
+.main-content:hover {
+    background-color: rgba(48, 47, 47, 0.9); 
+}
+
+.main-contents {
+    width: 40%;
+    padding: 10px;
+    background-color: rgb(55, 55, 55); 
+    color: #fff;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin-right: 10px; 
+    backdrop-filter: blur(1px); 
+    transition: background-color 0.3s ease;
+}
+
+.main-contents:hover {
+    background-color: rgba(48, 47, 47, 0.9); 
+}
+
+.about-us {
+    width: 40%;
+    padding: 10px;
+    background-color: rgb(55, 55, 55); 
+    color: #fff;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin-right: 10px; 
+    backdrop-filter: blur(1px); 
+    transition: background-color 0.3s ease;
+}
+
+.about-us:hover {
+    background-color: rgba(48, 47, 47, 0.9); 
+}
+.audio-container-wrapper {
+    display: flex;
+    justify-content: center; 
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: rgbargb(55, 55, 55);
+    backdrop-filter: blur(4px); 
+}
+
+.audio-container {
+    background: rgba(0, 0, 0, 0);
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 10px;
+    transition: background-color 0.7s ease;
+}
+
+.audio-container:hover {
+    background-color: rgba(255, 0, 0, 0.9);}
+
+    .audio-container.playing {
+        background-color: rgba(255, 0, 0, 0.9);}
+    
+
+
+.audio-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.audio-inner:hover .indicator {
+    color: #db4520;
+}
+
+.audio-title {
+    font-weight: bold;
+    color: white;
+}
+
+.indicator {
+    font-size: 24px;
+    color: rgba(48, 47, 47, 0.9);
+}
+
+#audioPlayer {
+    width: 100;
+    position: fixed;
+    bottom: 0;
+    left: 10;
+    color:#5c5c5c;
+    background: rgb(255, 255, 255); 
+    padding: 2px;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-bottom: 1px;
+    padding-top: 8px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    backdrop-filter: blur(5px); 
+    transition: background-color 1.1s ease;
+}
+
+#audioControl{
+    color:#5c5c5c;  
+}
+
+#audioPlayer:hover {
+    background-color: rgba(19, 18, 18, 0.9);
+    padding-left: 300px;
+    padding-right: 300px;}
+
+    #sidebar-container {
+        
+        position: relative; 
+        float: left; 
+    }
+    
+    .image-card {
+        width: calc(100% - 10px); 
+        
+        background-color: rgba(255, 255, 255, 0.3); 
+        border-radius: 10px; 
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+        overflow: hidden; 
+        clear: both;
+    }
+    
+    
+    .image-card img {
+        width: 100%; 
+        height: auto; 
+        display: block; 
+    }
+
+    th, td {
+        padding-right: 100px; 
+        background-color: rgba(34, 33, 33, 0.751);
+    }
+    
+    .container {
+        background-color: rgba(104, 104, 104, 0.169); 
+        padding: 10px;
+        margin: 20px;
+        border-radius: 10px;
+        backdrop-filter: blur(3px);
+        overflow: auto; 
+        transition: background-color 0.2s ease;
+    }
+
+    .container:hover {
+        background-color: rgba(19, 18, 18, 0.9);
+    }
+    
+    table tbody tr:hover {
+        background-color: rgba(132, 201, 189, 0.301);
+        border-radius: 10px;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+    
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    }
+    
+    button {
+        padding: 10px 20px;
+        background-color: #4242427d;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        display: inline-block;
+    }
+    
+    button:hover {
+        background-color: #0056b3;
+    }
+
+    .card {
+        width: 300px;
+        height: 300x; /* Adjust the height accordingly */
+    }
+    .card img {
+        width: 180px; /* This will make the image fill the width of the card */
+        height: 120px; /* Maintain aspect ratio */
+        border-radius: 7px;
+    }
+    .card-body {
+        padding: 10px; 
+        font-size: 14px; 
+    }
+
+    .card-container {
+        background-color: rgba(180, 180, 180, 0.158); 
+        padding: 10px; 
+        margin: 20px;
+        flex: 0 0 auto;
+        display: inline-block;
+        border-radius: 20px;
+        box-sizing: border-box;
+        backdrop-filter: blur(2px); 
+        transition: background-color 0.3s ease;
+    }
+
+    .card-container:hover {
+        background-color: rgba(209, 208, 208, 0.317); 
+    }
+    .card-container-wrapper {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        overflow-x: auto;
+        padding: 10px;
+        border-radius: 20px;
+        backdrop-filter: blur(10px); 
+    transition: background-color 0.3s ease;
+    }
+
+    .main-sidebar-wrapper {
+        display: flex;
+        justify-content: space-between;
+        background-color: rgba(48, 47, 47, 0.9); /* Adjust transparency */
+        padding: 5px;
+        border-radius: 17px;
+        backdrop-filter: blur(10px); 
+        transition: background-color 0.3s ease;
+        box-sizing: border-box;
+        width: 60%;
+    }
+
+    .main-content, #sidebar-container {
+        flex: 1;
+        margin: 5px;
+        box-sizing: border-box;
+    }
+
+    .playlist-container::-webkit-scrollbar {
+        width: 12px;
+    }
+    
+    .playlist-container::-webkit-scrollbar-track {
+        background: #5c5c5c; 
+        border-radius: 10px; /* Add border-radius to the track */
+    }
+    
+    .playlist-container::-webkit-scrollbar-thumb {
+        background: #ffffff; 
+        border-radius: 10px; /* Add border-radius to the thumb */
+    }
+    
+    .playlist-container::-webkit-scrollbar-thumb:hover {
+        background: #ff1a1a;
+    }
+
+    .action-button {
+        display: inline-block;
+        margin-right: 5px; /* Adjust margin as needed */
+    }
+    
+    
+    
+ 
+    
+    
+   
+
+
+    
+    
+    
+   

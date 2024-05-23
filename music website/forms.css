@@ -1,0 +1,103 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-size: 120%;
+    background: url('images/pexels-daniel-reche-718241-3721941.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.container {
+    
+    margin: 20px auto; /* Center the container */
+    padding: 20px; /* Add padding to the container */
+    border-radius: 10px;
+    overflow: auto;
+    transition: background-color 0.7s ease;
+}
+
+.header {
+    width: 30%;
+    margin: 50px auto 0px;
+    color: white;
+    background: #5F9EA0;
+    text-align: center;
+    border: 1px solid #B0C4DE;
+    border-bottom: none;
+    border-radius: 10px;
+    padding: 20px;
+    
+}
+
+form, .content {
+    width: 30%;
+    margin: 0px auto;
+    padding: 20px;
+    border: 1px solid #B0C4DE;
+    background: rgba(54, 54, 54, 0.308); /* Make the form background semi-transparent */
+    backdrop-filter: blur(3px);
+    border-radius:17px ;
+}
+
+h5 {
+    font-size: 2em;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+label{
+    color: rgb(255, 255, 255); 
+}
+
+p{
+    color: rgb(255, 255, 255);  
+}
+
+.input-group {
+    margin: 10px 0px 10px 0px;
+}
+
+.input-group label {
+    display: block;
+    text-align: left;
+    margin: 3px;
+}
+
+.input-group input {
+    height: 30px;
+    width: 93%;
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    color: rgb(0, 0, 0);
+}
+
+.btn {
+    padding: 10px;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    background: #4e4e4e77;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; /* Change the cursor to pointer on hover */
+}
+
+.error {
+    width: 92%;
+    margin: 0px auto;
+    padding: 10px;
+    border: 1px solid #a94442;
+    color: #a94442;
+    background: #f2dede;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.success {
+    color: #3c763d;
+    background: #dff0d8;
+    border: 1px solid #3c763d;
+    margin-bottom: 20px;
+}
